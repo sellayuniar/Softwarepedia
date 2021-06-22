@@ -1,0 +1,99 @@
+/* memasukan font eksternal */
+@font-face {
+  font-family: "happy";
+  src: url("/font/Happy_Lucky_Free.eot?#iefix") format("embedded-opentype"), url("/font/Happy_Lucky_Free.woff") format("woff");
+}
+/*  */
+@font-face {
+  font-family: "oswald";
+  src: url("/font/Oswalfd.eot?#iefix") format("embedded-opentype"), url("/font/Oswald.woff") format("woff");
+}
+
+@font-face {
+  font-family: "raleway";
+  src: url("/font/Raleway.eot?#iefix") format("embedded-opentype"), url("/font/Raleway.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "sans-bold";
+  src: url("/font/PTSansNarrow-Bold.eot?#iefix") format("embedded-opentype"), url("/font/PTSansNarrow-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Staatliches-Regular";
+  src: url("/font/Staatliches-Regular.eot?#iefix") format("embedded-opentype"), url("/font/Staatliches-Regular.woff2") format("woff2");
+}
+/* akhir memasukan font external */
+
+/* membuat class font */
+.sans-bold {
+  font-family: sans-bold;
+  font-size: 25px;
+}
+
+.Staatliches-Regular {
+  font-family: Staatliches-Regular;
+  font-size: 18px;
+}
+
+.happy {
+  font-family: happy;
+  font-size: 25px;
+}
+
+.oswald {
+  font-family: oswald;
+  font-size: 20px;
+}
+
+.raleway {
+  font-family: raleway;
+  font-size: 20px;
+}
+
+.font-footer {
+  font-family: oswald;
+}
+/* akhir membuat class font  */
+
+/* membuat text-align */
+.rata-kanan {
+  text-align: right;
+}
+
+.rata-tengah {
+  text-align: center;
+}
+
+.rata-kiri {
+  text-align: left;
+}
+/* akhir membuat text-align */
+
+/* menambahkan tampilan pada tag html */
+p {
+  font-family: raleway;
+  font-size: 18px;
+  text-align: justify;
+  color: black;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 100px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 80px;
+}
+
+/* akhir menambahkan tampilan pada text html */

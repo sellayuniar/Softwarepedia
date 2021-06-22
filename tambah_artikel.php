@@ -1,0 +1,68 @@
+<?php
+include "../koneksi.php"; //menyisipkan file koneksi.php
+include "../layout/header.php";  //menyisipkan file header.php
+?>
+<div class="row justify-content-center mt-5"> <!-- untuk menampilkan baris rata tengah-->
+    <div class="col-md-8"> <!-- membuat tampilan layar medium  -->
+      <div class="card"> <!--membuat tampilan card -->
+        <div class="card-header bg-transparent mb-0"> <!--membuat tampilan card-header dengan background transparan dan margin bottom 0 -->
+            <div class="happy"> <!-- memanggil font happy-->
+               <div class="rata-tengah"> <!--membuat konten rata-tengah -->
+                <h1 >Tambah <span class="font-weight-bold text-primary">  Artikel </span></h1> <!--membuat text -->
+            </div>
+            </div>
+             </div>
+        <div class="card-body">  <!-- membuat tampilan card-body -->
+            <div class="col-10 container mr-auto ml-auto">  <!-- membuat kolom ukuran 10 -->
+                <form action="proses_tambah_artikel.php" method="POST" enctype="multipart/form-data">  <!-- membuat form dengan method post dan ketika file di submit akan mengeksekusi halaman proses_tambah_artikel.php -->
+                    <div class="form-group">  <!--ntuk mengelompokkan isi form  -->
+                        <div class="raleway">  <!-- memanggil font -->
+                        <label>Foto </label>  <!-- membuat label -->
+                        <input type="file" name="foto" class="form-control btn btn-info">  <!-- membuat input type file -->
+                        <p style="color: red">Ekstensi yang diperbolehkan .png | .jpg | .jpeg | .gif</p>  <!--  membuat paragraf berwarna merah-->
+                         </div>
+                        </div>
+                    
+                    <div class="form-group">  <!-- untuk mengelompokkan isi form  -->
+                        <div class="raleway">  <!-- memanggil font -->
+                        <label for="judulartikel">Judul Artikel</label>  <!-- membuat label -->
+                        <input type="text" class="form-control" id="judulartikel" name="judul" placeholder="masukan judul artikel">  <!--membuat input type text  -->
+                         </div>
+                    </div>
+                    <br>
+                    
+                    <div class="form-group">  <!-- untuk mengelompokkan isi form -->
+                        <div class="raleway">  <!-- memanggil font -->
+                        <label for="kategoriartikel">Kategori Artikel</label>  <!-- membuat label  -->
+                        <select class="form-control" id="kategoriartikel" name="kategori">  <!-- membuat dropdown -->
+                            <option value="lainnya">Pilih Kategori</option>  <!-- pilihan dropdown pilih kategori -->
+                            <option value="windows">Windows</option>  <!-- pilihan dropdown windows -->
+                            <option value="ios">iOS</option>  <!-- pilihan dropdown pilih iOs -->
+                            <option value="android">Android</option>  <!-- pilihan dropdown kategori -->
+                        </select>
+                     </div>
+                    </div>
+                    <br>
+                    
+                    <div class="form-group">  <!--untuk mengelompokkan isi form  -->
+                        <div class="raleway">  <!-- memanggil font -->
+                        <label for="ckeditor">Isi Artikel</label>  <!-- membuat label-->
+                        <textarea class="form-control ckeditor" id="ckedtor" name="isi" rows="8"></textarea>  <!-- membuat text area -->
+                        <script>
+                            CKEDITOR.replace('isi'); 
+                        </script>
+                         </div>
+                    </div>
+                    <div class="form-group mt-4">  <!-- untuk mengelompokkan isi form -->
+                        <div class="raleway">  <!-- memanggil font -->
+                        <button type="submit" class="btn btn-success">  Tambah <i class="bi bi-cursor-fill"></i></button>  <!--membuat button tambah  -->
+                     </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<?php
+include("../layout/footer.php"); //menyisipkan file footer.php
+?>
